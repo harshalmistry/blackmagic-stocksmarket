@@ -1,0 +1,18 @@
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+#home-section .home-inner {
+  margin: 80px auto;
+}
+
+.rowborder {
+  border: 1px solid #008ed6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0 10px 0;
+}

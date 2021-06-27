@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  userServiceBaseUrl: 'http://localhost:8765/bw-users-service/api/users',
+  stockServiceBaseUrl: 'http://localhost:8765/bw-stocks-service/api/stocks',
+  refreshRate: 60000,
 };
 
 /*

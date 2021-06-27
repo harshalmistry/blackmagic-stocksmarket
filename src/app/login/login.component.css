@@ -1,0 +1,15 @@
+.card-form {
+  opacity: 0.9;
+  background-color: #008ed6;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.card-form input[type="submit"] {
+  margin-bottom: 20px;
+}
+
+.forgotpassword {
+  color: white;
+  text-decoration: none;
+}

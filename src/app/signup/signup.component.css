@@ -1,0 +1,24 @@
+#home-section {
+  background: url(../../assets/img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#home-section .dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#home-section .home-inner {
+  margin: 230px auto;
+}
+
+.border-right {
+  border-right: 2px solid #008ed6 !important;
+}

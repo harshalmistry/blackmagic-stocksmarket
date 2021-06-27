@@ -1,0 +1,19 @@
+<section id="home-section">
+  <div class="dark-overlay">
+    <div class="home-inner container-fluid">
+      <div class="row">
+        <div class="col">
+          <app-searchstock (searchedStock)="onSearch($event)"></app-searchstock>
+        </div>
+      </div>
+      <div class="row" class="rowborder" *ngIf="stock">
+        <div class="col">
+          <app-stockdetail [stock]="stock"></app-stockdetail>
+        </div>
+      </div>
+      <div class="row" class="rowborder">
+        <div class="col"><app-watchlist></app-watchlist></div>
+      </div>
+    </div>
+  </div>
+</section>

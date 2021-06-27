@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-4">
+    <span class="label">Name</span> - {{ stock.stockName }}
+  </div>
+  <div class="col-md-4">
+    <span class="label">Today's opening price</span> - {{ stock.open }}
+  </div>
+  <div class="col-md-4">
+    <span class="label">52 week low</span> - {{ stock.yearLow }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <span class="label">Current price</span> - {{ stock.price }}
+  </div>
+  <div class="col-md-4">
+    <span class="label">Yesterday's closig price</span> -
+    {{ stock.previousClose }}
+  </div>
+  <div class="col-md-4">
+    <span class="label">52 week high</span> - {{ stock.yearHigh }}
+  </div>
+</div>
+<div class="row">
+  <div class="col-4">
+    <small class="error" *ngIf="msg">{{ msg }}</small>
+  </div>
+  <div class="col-4">
+    <button class="btn btn-outline-light" (click)="onAddToWatchList()">
+      Add to watchlist
+    </button>
+  </div>
+</div>

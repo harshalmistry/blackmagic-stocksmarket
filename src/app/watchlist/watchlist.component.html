@@ -1,0 +1,98 @@
+<div class="table-responsive">
+  <table class="table watchlist sortable">
+    <caption style="caption-side: top !important">
+      Stocks Watchlist
+      <small class="error" *ngIf="msg">{{ msg }}</small>
+      <!-- <button class="btn btn-outline-light ml-3" (click)="getWatchListStocks()">
+        Refresh
+      </button> -->
+    </caption>
+
+    <thead>
+      <tr>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="stockName"
+        >
+          Stock Name
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="current"
+        >
+          Current Price
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="todayGain"
+        >
+          Today's gain%
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="lastWeekGain"
+        >
+          Last week gain%
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="twoWeeksGain"
+        >
+          2 week gain%
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="threeWeeksGain"
+        >
+          3 week gain%
+        </th>
+        <th
+          scope="col"
+          [appSort]="stocks"
+          data-order="desc"
+          data-name="monthGain"
+        >
+          Month gain%
+        </th>
+        <th scope="col">Notes</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let stock of stocks; let i = index">
+        <th>{{ stock.stockName }}</th>
+        <td>{{ stock.current }}</td>
+        <td>{{ stock.todayGain }}</td>
+        <td>{{ stock.lastWeekGain }}</td>
+        <td>{{ stock.twoWeeksGain }}</td>
+        <td>{{ stock.threeWeeksGain }}</td>
+        <td>{{ stock.monthGain }}</td>
+        <td>
+          <textarea class="form-control" row="1" [(ngModel)]="stock.userNote">{{
+            stock.userNote
+          }}</textarea>
+        </td>
+        <td>
+          <button class="btn btn-outline-light" (click)="onSave(stock)">
+            <i class="fas fa-save"></i>
+          </button>
+          <button class="btn btn-outline-light" (click)="onDelete(i, stock.id)">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
